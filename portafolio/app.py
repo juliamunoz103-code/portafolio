@@ -148,10 +148,13 @@ st.markdown(f"""
   <p class="hero-bio">{BIO}</p>
   <div class="hero-links">
     <a class="pill" href="https://github.com/{GITHUB_USER}" target="_blank">⟡ GitHub</a>
-    <a class="pill" href="mailto:{EMAIL}">✉ Contacto</a>
   </div>
 </div>
 """, unsafe_allow_html=True)
+
+col1, col2 = st.columns([1, 8])
+with col1:
+    st.link_button("✉ Contacto", f"mailto:{EMAIL}")
 
 # ── Stats ─────────────────────────────────────────────────────────────────────
 st.markdown(f"""
