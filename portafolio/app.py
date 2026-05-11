@@ -47,7 +47,7 @@ BIO = "Data Scientist | Estudiante de Ingeniería Biomédica (UANL) | Python · 
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=Outfit:wght@300;400;500&display=swap');
 
 html, body, [class*="css"] { font-family: 'Outfit', sans-serif; }
 #MainMenu, footer, header { visibility: hidden; }
@@ -59,11 +59,11 @@ html, body, [class*="css"] { font-family: 'Outfit', sans-serif; }
 .hero-wrap { padding: 3rem 0 2.5rem; border-bottom: 1px solid #E5E5E5; margin-bottom: 2.5rem; }
 .hero-tag { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #AAA; margin-bottom: 0.75rem; }
 .hero-name {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 4rem;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1.15;
-    letter-spacing: -0.01em;
+    letter-spacing: 0em;
     margin-bottom: 0.75rem;
     background: linear-gradient(135deg, #6C63FF, #FF6B6B);
     -webkit-background-clip: text;
@@ -91,11 +91,11 @@ html, body, [class*="css"] { font-family: 'Outfit', sans-serif; }
 
 .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 2.5rem; }
 .stat-card { background: #F7F7F7; border: 1px solid #EEEEEE; border-radius: 16px; padding: 1.25rem; text-align: center; }
-.stat-n { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: #111; line-height: 1; }
+.stat-n { font-family: 'Nunito', sans-serif; font-size: 2rem; font-weight: 800; color: #111; line-height: 1; }
 .stat-l { font-size: 12px; color: #999; margin-top: 4px; }
 
 .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; }
-.section-title { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; color: #111; white-space: nowrap; }
+.section-title { font-family: 'Nunito', sans-serif; font-size: 1.3rem; font-weight: 700; color: #111; white-space: nowrap; }
 .section-line { flex: 1; height: 1px; background: #E5E5E5; }
 
 .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 3rem; }
@@ -104,11 +104,11 @@ html, body, [class*="css"] { font-family: 'Outfit', sans-serif; }
 .card-accent { height: 4px; }
 .card-body { padding: 1.25rem; }
 .card-emoji { font-size: 1.75rem; margin-bottom: 0.6rem; display: block; }
-.card-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 0.4rem; }
+.card-title { font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 0.4rem; }
 .card-desc { font-size: 13px; color: #888; line-height: 1.6; margin-bottom: 0.9rem; font-weight: 300; }
 .tags-row { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 1rem; }
 .tag { font-size: 11px; padding: 3px 10px; border-radius: 100px; font-weight: 500; border: 1px solid; }
-.launch-btn { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-size: 13px; font-weight: 500; padding: 7px 16px; border-radius: 100px; color: white; }
+.launch-btn { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-size: 13px; font-weight: 600; padding: 7px 16px; border-radius: 100px; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
 
 .repos-wrap { border: 1px solid #EEEEEE; border-radius: 16px; overflow: hidden; background: #FAFAFA; }
 .repo-item { padding: 0.7rem 1.25rem; border-bottom: 1px solid #EEEEEE; display: flex; align-items: center; justify-content: space-between; }
