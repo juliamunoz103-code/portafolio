@@ -42,49 +42,82 @@ PROJECTS = [
 ]
 
 GITHUB_USER = "juliamunoz103-code"
+EMAIL = "julia.munozgzz@gmail.com"
 BIO = "Data Scientist | Estudiante de Ingeniería Biomédica (UANL) | Python · SQL · ML | Bilingüe"
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Outfit:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;500&display=swap');
+
 html, body, [class*="css"] { font-family: 'Outfit', sans-serif; }
 #MainMenu, footer, header { visibility: hidden; }
+
+/* Fondo blanco */
+.stApp { background-color: #FFFFFF !important; }
 .block-container { padding: 2rem 3rem 4rem !important; max-width: 1050px !important; }
 
-.hero-wrap { padding: 3rem 0 2.5rem; border-bottom: 1px solid #2a2a2a; margin-bottom: 2.5rem; }
-.hero-tag { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #666; margin-bottom: 0.5rem; }
-.hero-name { font-family: 'Syne', sans-serif; font-size: 3.5rem; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 0.75rem; background: linear-gradient(135deg, #6C63FF, #FF6B6B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; }
-.hero-bio { font-size: 1rem; color: #888; line-height: 1.7; max-width: 540px; font-weight: 300; margin-bottom: 1.5rem; }
+.hero-wrap { padding: 3rem 0 2.5rem; border-bottom: 1px solid #E5E5E5; margin-bottom: 2.5rem; }
+.hero-tag { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #AAA; margin-bottom: 0.75rem; }
+.hero-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, #6C63FF, #FF6B6B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+.hero-bio { font-size: 1rem; color: #666; line-height: 1.7; max-width: 540px; font-weight: 300; margin-bottom: 1.5rem; }
 .hero-links { display: flex; flex-wrap: wrap; gap: 8px; }
-.pill { display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 100px; font-size: 13px; font-weight: 500; text-decoration: none; border: 1px solid #333; color: #CCC; background: transparent; }
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 18px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1.5px solid #DDD;
+    color: #444;
+    background: transparent;
+    transition: all 0.2s;
+}
+.pill:hover { border-color: #6C63FF; color: #6C63FF; }
 
 .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 2.5rem; }
-.stat-card { background: #161616; border: 1px solid #222; border-radius: 16px; padding: 1.25rem; text-align: center; }
-.stat-n { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: #F0F0F0; line-height: 1; }
-.stat-l { font-size: 12px; color: #666; margin-top: 4px; }
+.stat-card { background: #F7F7F7; border: 1px solid #EEEEEE; border-radius: 16px; padding: 1.25rem; text-align: center; }
+.stat-n { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: #111; line-height: 1; }
+.stat-l { font-size: 12px; color: #999; margin-top: 4px; }
 
 .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; }
-.section-title { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; color: #F0F0F0; white-space: nowrap; }
-.section-line { flex: 1; height: 1px; background: #222; }
+.section-title { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; color: #111; white-space: nowrap; }
+.section-line { flex: 1; height: 1px; background: #E5E5E5; }
 
 .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 3rem; }
-.project-card { border-radius: 18px; border: 1px solid #222; background: #111; overflow: hidden; }
+.project-card { border-radius: 18px; border: 1px solid #EEEEEE; background: #FFFFFF; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+.project-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
 .card-accent { height: 4px; }
 .card-body { padding: 1.25rem; }
 .card-emoji { font-size: 1.75rem; margin-bottom: 0.6rem; display: block; }
-.card-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: #F0F0F0; margin-bottom: 0.4rem; }
-.card-desc { font-size: 13px; color: #777; line-height: 1.6; margin-bottom: 0.9rem; font-weight: 300; }
+.card-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 0.4rem; }
+.card-desc { font-size: 13px; color: #888; line-height: 1.6; margin-bottom: 0.9rem; font-weight: 300; }
 .tags-row { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 1rem; }
 .tag { font-size: 11px; padding: 3px 10px; border-radius: 100px; font-weight: 500; border: 1px solid; }
 .launch-btn { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-size: 13px; font-weight: 500; padding: 7px 16px; border-radius: 100px; color: white; }
 
-.repos-wrap { display: flex; flex-direction: column; gap: 0; }
-.repo-item { padding: 0.6rem 0; border-bottom: 1px solid #1E1E1E; display: flex; align-items: center; justify-content: space-between; }
+.repos-wrap { border: 1px solid #EEEEEE; border-radius: 16px; overflow: hidden; background: #FAFAFA; }
+.repo-item { padding: 0.7rem 1.25rem; border-bottom: 1px solid #EEEEEE; display: flex; align-items: center; justify-content: space-between; }
 .repo-item:last-child { border-bottom: none; }
-.repo-item-name { font-size: 14px; color: #9B94FF; font-weight: 500; }
-.repo-item-lang { font-size: 11px; color: #555; }
+.repo-item-name { font-size: 14px; color: #6C63FF; font-weight: 500; text-decoration: none; }
+.repo-item-name:hover { text-decoration: underline; }
+.repo-item-lang { font-size: 11px; color: #BBB; }
 
-.footer { text-align: center; padding: 2rem 0 1rem; border-top: 1px solid #1E1E1E; margin-top: 2rem; color: #444; font-size: 13px; }
+.footer { text-align: center; padding: 2rem 0 1rem; border-top: 1px solid #EEEEEE; margin-top: 2rem; color: #BBB; font-size: 13px; }
 .footer a { color: #6C63FF; text-decoration: none; }
 </style>
 """, unsafe_allow_html=True)
@@ -115,7 +148,7 @@ st.markdown(f"""
   <p class="hero-bio">{BIO}</p>
   <div class="hero-links">
     <a class="pill" href="https://github.com/{GITHUB_USER}" target="_blank">⟡ GitHub</a>
-    <a class="pill" href="mailto:contacto@julia.com">✉ Contacto</a>
+    <a class="pill" href="mailto:{EMAIL}">✉ Contacto</a>
   </div>
 </div>
 """, unsafe_allow_html=True)
@@ -140,7 +173,7 @@ st.markdown("""
 
 for p in PROJECTS:
     tags_html = "".join(
-        f'<span class="tag" style="color:{p["text"]};border-color:{p["color"]}44;background:{p["bg"]}22">{t}</span>'
+        f'<span class="tag" style="color:{p["text"]};border-color:{p["color"]}44;background:{p["bg"]}">{t}</span>'
         for t in p["tags"]
     )
     st.markdown(f"""
@@ -158,7 +191,7 @@ for p in PROJECTS:
 
 st.markdown("</div>", unsafe_allow_html=True)
 
-# ── Repos — solo títulos en tabla limpia ──────────────────────────────────────
+# ── Repos ─────────────────────────────────────────────────────────────────────
 if repos:
     st.markdown("""
     <div class="section-header" style="margin-top:0.5rem">
@@ -169,7 +202,6 @@ if repos:
 
     public_repos = [r for r in repos if isinstance(r, dict) and not r.get("fork")]
 
-    # Construir toda la lista en un solo bloque HTML
     items_html = ""
     for r in public_repos[:15]:
         lang = r.get("language") or ""
@@ -189,5 +221,7 @@ st.markdown(f"""
 <div class="footer">
   Hecho con ♥ en Streamlit &nbsp;·&nbsp;
   <a href="https://github.com/{GITHUB_USER}" target="_blank">@{GITHUB_USER}</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:{EMAIL}">{EMAIL}</a>
 </div>
 """, unsafe_allow_html=True)
