@@ -176,6 +176,7 @@ st.markdown("""
 <div class="projects-grid">
 """, unsafe_allow_html=True)
 
+cards_html = ""
 for p in PROJECTS:
     tags_html = "".join(
         f'<span class="tag" style="color:{p["text"]};border-color:{p["color"]}44;background:{p["bg"]}">{t}</span>'
@@ -185,7 +186,7 @@ for p in PROJECTS:
         f'<a class="pill" href="{p["repo_url"]}" target="_blank" style="margin-left:8px;font-size:12px;">⟡ Repo</a>'
         if p.get("repo_url") else ""
     )
-    st.markdown(f"""
+    cards_html += f"""
 <div class="project-card">
   <div class="card-accent" style="background:{p['color']}"></div>
   <div class="card-body">
@@ -198,10 +199,9 @@ for p in PROJECTS:
       {repo_btn}
     </div>
   </div>
-</div>
-""", unsafe_allow_html=True)
+</div>"""
 
-st.markdown("</div>", unsafe_allow_html=True)
+st.markdown(cards_html + "</div>", unsafe_allow_html=True)
 
 # ── Repos ─────────────────────────────────────────────────────────────────────
 if repos:
