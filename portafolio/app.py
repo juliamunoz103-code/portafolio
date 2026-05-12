@@ -39,6 +39,17 @@ PROJECTS = [
         "bg": "#FFF0F0",
         "text": "#CC4444",
     },
+    {
+        "title": "IngBioCalc Pro",
+        "emoji": "🧬",
+        "desc": "Calculadora avanzada para Ingeniería Biomédica: matrices, estadística, vectores, fórmulas con LaTeX y chatbot IA con Claude.",
+        "tags": ["Biomédica", "Streamlit", "Matemáticas", "IA"],
+        "url": "https://ingbiocalc-pro-qiumwmpvncvazz2kmiya8c.streamlit.app/",
+        "repo_url": "https://github.com/juliamunoz103-code/ingbiocalc-pro",
+        "color": "#F59E0B",
+        "bg": "#FFFBEB",
+        "text": "#B45309",
+    },
 ]
 
 GITHUB_USER = "juliamunoz103-code"
@@ -170,6 +181,10 @@ for p in PROJECTS:
         f'<span class="tag" style="color:{p["text"]};border-color:{p["color"]}44;background:{p["bg"]}">{t}</span>'
         for t in p["tags"]
     )
+    repo_btn = (
+        f'<a class="pill" href="{p["repo_url"]}" target="_blank" style="margin-left:8px;font-size:12px;">⟡ Repo</a>'
+        if p.get("repo_url") else ""
+    )
     st.markdown(f"""
 <div class="project-card">
   <div class="card-accent" style="background:{p['color']}"></div>
@@ -178,7 +193,10 @@ for p in PROJECTS:
     <div class="card-title">{p['title']}</div>
     <p class="card-desc">{p['desc']}</p>
     <div class="tags-row">{tags_html}</div>
-    <a class="launch-btn" href="{p['url']}" target="_blank" style="background:{p['color']}">Abrir app →</a>
+    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;">
+      <a class="launch-btn" href="{p['url']}" target="_blank" style="background:{p['color']}">Abrir app →</a>
+      {repo_btn}
+    </div>
   </div>
 </div>
 """, unsafe_allow_html=True)
